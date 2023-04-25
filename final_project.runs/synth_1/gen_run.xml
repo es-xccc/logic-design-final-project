@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1681985397">
+  <File Type="PA-TCL" Name="led_shift.tcl"/>
+  <File Type="REPORTS-TCL" Name="led_shift_reports.tcl"/>
+  <File Type="RDS-RDS" Name="led_shift.vds"/>
+  <File Type="RDS-UTIL" Name="led_shift_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="led_shift_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="led_shift.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/src/clk_div.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/User/Downloads/class_2/demo/src/clk_div.v"/>
+        <Attr Name="ImportTime" Val="1618236760"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/shifter_groupnum.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/User/Downloads/class_2/demo/src/shifter_groupnum.v"/>
+        <Attr Name="ImportTime" Val="1677921803"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/led_shift.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/User/Downloads/class_2/demo/src/led_shift.v"/>
+        <Attr Name="ImportTime" Val="1618236776"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="led_shift"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/xdc/demo.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/User/Downloads/class_2/demo/xdc/demo.xdc"/>
+        <Attr Name="ImportTime" Val="1677929348"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
