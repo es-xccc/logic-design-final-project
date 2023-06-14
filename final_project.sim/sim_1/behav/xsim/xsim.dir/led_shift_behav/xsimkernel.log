@@ -2,3 +2,6 @@ Running: xsim.dir/led_shift_behav/xsimk.exe -simmode gui -wdb led_shift_behav.wd
 Design successfully loaded
 Design Loading Memory Usage: 8788 KB (Peak: 8788 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 9288 KB (Peak: 9288 KB)
+Simulation CPU Usage: 0 ms
