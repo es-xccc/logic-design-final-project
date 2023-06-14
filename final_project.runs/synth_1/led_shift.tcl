@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/VivadoProject/final_project/final_project.runs/synth_1/led_shift.tcl"
+  variable script "C:/Github_Repo/Logic_Design_final_project/final_project.runs/synth_1/led_shift.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,19 +76,19 @@ create_project -in_memory -part xc7z020clg400-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/VivadoProject/final_project/final_project.cache/wt [current_project]
-set_property parent.project_path C:/VivadoProject/final_project/final_project.xpr [current_project]
+set_property webtalk.parent_dir C:/Github_Repo/Logic_Design_final_project/final_project.cache/wt [current_project]
+set_property parent.project_path C:/Github_Repo/Logic_Design_final_project/final_project.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_output_repo c:/VivadoProject/final_project/final_project.cache/ip [current_project]
+set_property ip_output_repo c:/Github_Repo/Logic_Design_final_project/final_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/VivadoProject/final_project/final_project.srcs/sources_1/imports/src/clk_div.v
-  C:/VivadoProject/final_project/final_project.srcs/sources_1/imports/src/shifter_groupnum.v
-  C:/VivadoProject/final_project/final_project.srcs/sources_1/imports/src/led_shift.v
+  C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/clk_div.v
+  C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/shifter_groupnum.v
+  C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/led_shift.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -99,8 +99,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/VivadoProject/final_project/final_project.srcs/constrs_1/imports/xdc/demo.xdc
-set_property used_in_implementation false [get_files C:/VivadoProject/final_project/final_project.srcs/constrs_1/imports/xdc/demo.xdc]
+read_xdc C:/Github_Repo/Logic_Design_final_project/final_project.srcs/constrs_1/imports/xdc/demo.xdc
+set_property used_in_implementation false [get_files C:/Github_Repo/Logic_Design_final_project/final_project.srcs/constrs_1/imports/xdc/demo.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

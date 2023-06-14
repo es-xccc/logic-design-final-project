@@ -3,7 +3,7 @@
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
-# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 # 
 
 echo "This script was generated under a different operating system."
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/VivadoProject/final_project/final_project.runs/synth_1'
+HD_PWD='C:/Github_Repo/Logic_Design_final_project/final_project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
