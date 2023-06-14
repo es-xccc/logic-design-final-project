@@ -1,12 +1,14 @@
 
 module shifter(
-input clk,rst,flag,
+input clk,rst,flag,stop,
 output reg [3:0]out
 );
 
 
-always @(posedge clk or posedge rst) begin
-    if (rst) begin
+always @(posedge clk) begin
+    if (stop) begin
+    end
+    else if (rst) begin
         out = 4'b0000;
     end
     else begin

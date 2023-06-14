@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -103,6 +105,8 @@ read_xdc C:/Github_Repo/Logic_Design_final_project/final_project.srcs/constrs_1/
 set_property used_in_implementation false [get_files C:/Github_Repo/Logic_Design_final_project/final_project.srcs/constrs_1/imports/xdc/demo.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Github_Repo/Logic_Design_final_project/final_project.srcs/utils_1/imports/synth_1/led_shift.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

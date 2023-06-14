@@ -1,18 +1,18 @@
 //do not modify this module
 module led_shift(
     input   clk   ,
-    input   rst   ,
-    input    sw  ,
-    output  [3:0] led
+    input   [3:0] btn   ,
+    output [3:0] led
     );
-    
+    reg direction=0, temp=0, aaah=0;
     wire    clk_div ;
     
     shifter s0(
     .clk    (clk_div),
-	.rst	(rst),
-    .flag   (sw),
-    .out    (led)
+	.rst	(0),
+    .flag   (direction),
+    .out    (led),
+    .stop   (aaah)
     );
     
     clk_div clk_div_0(
@@ -22,4 +22,9 @@ module led_shift(
     );
     
     
+    always @(btn)begin
+        if(btn==4'b0010)begin
+            direction=~direction;
+        end
+    end
 endmodule
