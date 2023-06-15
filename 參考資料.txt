@@ -1,3 +1,3 @@
-四位數七段顯示器 http://www.goodbooks.com.tw/inter/3_4.pdf
+四位數七段顯示器 http://idielectronica.blogspot.com/2016/02/button-press-counter-using-4-digit-7.html
 pynq教學 https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:pynq_usage.pdf
 Constraints https://caslab.ee.ncku.edu.tw/dokuwiki/_media/course:logic_system_practice:07_laboratory-7.pdf

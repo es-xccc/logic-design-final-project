@@ -3,27 +3,25 @@
 module testbench;
 reg clk;
 reg [3:0]btn;
-wire [3:0]ledd;
-wire[11:0] ar;
+wire [3:0] led;
+wire [11:0] ar;
+reg a,b,c,d;
 
-
-led_shift  test(.clk(clk),.btn(btn),.led(ledd),.ar(ar));
+blackjack  test(.num3(a),.num2(b),.num1(c),.num0(d),.clk(clk),.btn(btn),.led(led),.ar(ar));
 
  initial
  begin
   clk= 1;	           // Time = 0
-
+   #250;
+   a=3;b=2;c=1;d=0;
+   #250
+   a=1;b=0;c=1;d=0;
+   #250
+$finish;
  end
  always 
  begin
 	#25  clk= ~clk;
- end
-
- initial
- begin
-
-   #250;		              // Time = 125
-$finish;
  end
 
  endmodule
