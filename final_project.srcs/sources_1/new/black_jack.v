@@ -4,15 +4,15 @@ module blackjack(input [6:0]num3,num2,num1,num0, input clk, input [3:0] btn, out
     parameter min=4'b0001;
     parameter max=4'b1010;
     parameter boom=5'b10101;
-    
+ /*   
     always @(posedge clk) begin
         rand <= min + {$random} % (max - min + 4'b0001);
     end
-    
+    */
     reg [4:0] point_1=5'b00;
     reg [4:0] point_2=5'b00;
     reg state=3'b00; //000:P1,P2(o);  001:P1,P2(x),  010:P2,P1(o);  011:P2,P1(x);  100:finish
-    
+ /*   
     always @(*) begin
         case(state)
             3'b000: begin
@@ -84,6 +84,7 @@ module blackjack(input [6:0]num3,num2,num1,num0, input clk, input [3:0] btn, out
                  end
              end
         end
+*/
         reg [3:0] cou=4'd0;
         always @(posedge clk) begin
             case(cou)
