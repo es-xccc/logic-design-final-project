@@ -13,14 +13,14 @@ blackjack  test(.num3(a),.num2(b),.num1(c),.num0(d),.clk(clk),.btn(btn),.led(led
  begin
   clk= 1;	           // Time = 0
    a=3;b=2;c=1;d=0;
-   #250
+   #500
    a=1;b=0;c=1;d=0;
-   #250
+   #500
 $finish;
  end
  always 
  begin
-	#25  clk= ~clk;
+	#10  clk= ~clk;
  end
 
  endmodule
