@@ -2,12 +2,12 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Wed Jun 14 21:28:14 2023
-# Process ID: 10596
+# Start of session at: Thu Jun 15 16:24:29 2023
+# Process ID: 12020
 # Current directory: C:/Github_Repo/Logic_Design_final_project/final_project.runs/synth_1
 # Command line: vivado.exe -log led_shift.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_shift.tcl
 # Log file: C:/Github_Repo/Logic_Design_final_project/final_project.runs/synth_1/led_shift.vds
 # Journal file: C:/Github_Repo/Logic_Design_final_project/final_project.runs/synth_1\vivado.jou
-# Running On: DESKTOP-LCJND1O, OS: Windows, CPU Frequency: 3394 MHz, CPU Physical cores: 12, Host memory: 17101 MB
+# Running On: LAPTOP-TLK1S9GH, OS: Windows, CPU Frequency: 1190 MHz, CPU Physical cores: 4, Host memory: 8321 MB
 #-----------------------------------------------------------
 source led_shift.tcl -notrace

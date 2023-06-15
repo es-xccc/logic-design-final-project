@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1686749285">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1686817466">
   <File Type="ROUTE-PWR" Name="led_shift_power_routed.rpt"/>
   <File Type="PA-TCL" Name="led_shift.tcl"/>
   <File Type="BITSTR-MMI" Name="led_shift.mmi"/>
@@ -90,10 +90,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/src/shifter_groupnum.v">
+    <File Path="$PSRCDIR/sources_1/new/display.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/User/Downloads/demo/src/shifter_groupnum.v"/>
-        <Attr Name="ImportTime" Val="1677921803"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -103,6 +101,16 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../Users/User/Downloads/demo/src/led_shift.v"/>
         <Attr Name="ImportTime" Val="1618236776"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/src/shifter_groupnum.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/User/Downloads/demo/src/shifter_groupnum.v"/>
+        <Attr Name="ImportTime" Val="1677921803"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -143,9 +151,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

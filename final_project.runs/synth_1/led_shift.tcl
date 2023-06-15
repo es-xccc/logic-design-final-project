@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
+set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
@@ -89,7 +89,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/clk_div.v
-  C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/shifter_groupnum.v
+  C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/new/display.v
   C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/led_shift.v
 }
 OPTRACE "Adding files" END { }

@@ -2,7 +2,9 @@
 2020.2
 Feb 21 2023
 20:21:35
-C:/Github_Repo/Logic_Design_final_project/final_project.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
-C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/clk_div.v,1618236760,verilog,,C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/shifter_groupnum.v,,clk_div,,,,,,,,
-C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/led_shift.v,1686746967,verilog,,,,led_shift,,,,,,,,
+C:/Github_Repo/Logic_Design_final_project/final_project.sim/sim_1/behav/xsim/glbl.v,1686808725,verilog,,,,glbl,,,,,,,,
+C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sim_1/new/testb.v,1686819046,verilog,,,,testbench,,,,,,,,
+C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/clk_div.v,1682398333,verilog,,C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/new/display.v,,clk_div,,,,,,,,
+C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/led_shift.v,1686819841,verilog,,C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sim_1/new/testb.v,,led_shift,,,,,,,,
 C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/shifter_groupnum.v,1686746458,verilog,,C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/led_shift.v,,shifter,,,,,,,,
+C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/new/display.v,1686819293,verilog,,C:/Github_Repo/Logic_Design_final_project/final_project.srcs/sources_1/imports/src/led_shift.v,,display,,,,,,,,
