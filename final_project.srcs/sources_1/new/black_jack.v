@@ -19,6 +19,9 @@ module blackjack( input clk, input [3:0] btn, output reg [3:0] led, output reg [
             3'b000: begin
                 if(btn[0]) begin 
                     point_1=point_1+rand;
+                    num3 = point_1 - point_1 % 5'd10;
+                    num2 = point_1 % 5'd10;
+                    
                     if(point_1<=boom) begin  
                         state=3'b010;
                     end
@@ -45,6 +48,8 @@ module blackjack( input clk, input [3:0] btn, output reg [3:0] led, output reg [
             3'b010: begin
                 if(btn[2]) begin 
                     point_2=point_2+rand;
+                    num1 = point_1 - point_1 % 5'd10;
+                    num0 = point_1 % 5'd10;
                     if(point_2<=boom) begin  
                         state=3'b000;
                     end
@@ -57,7 +62,8 @@ module blackjack( input clk, input [3:0] btn, output reg [3:0] led, output reg [
             
             3'b011: begin
                 if(btn[2]) begin 
-                    point_2=point_2+rand;
+                    num1 = point_1 - point_1 % 5'd10;
+                    num0 = point_1 % 5'd10;
                     if(point_2<=boom) begin  
                         state=3'b000;
                     end
