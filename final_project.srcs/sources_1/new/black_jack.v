@@ -1,5 +1,10 @@
 `timescale 1ns/1ns
 module blackjack( input clk, input [3:0] btn, output reg [3:0] led, output reg [11:0] ar);
+    clk_div clk_div_0(
+    .clk    (clk),
+    .rst    (rst),
+    .clk_div    (clk_div)
+    );
     reg [6:0]num3,num2,num1,num0;
     reg [4:0]rand;
     parameter min=4'b0001;
