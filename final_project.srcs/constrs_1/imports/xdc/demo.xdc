@@ -5,18 +5,15 @@
 
 ## Clock signal 125 MHz
 
-#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets btn_IBUF[0]]
-#set_property SEVERITY {Warning} [get_drc_checks UCIO-1]
-#set_property SEVERITY {Warning} [get_drc_checks NSTD-1]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets btn_IBUF[0]];
 set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_35 Sch=sysclk
 create_clock -add -name sys_clk_pin -period 10000000 -waveform {0 5000000} [get_ports { clk }];
 
 #for clk_div
-#create_generated_clock -name clk_div -divide_by 1 -source [get_ports clk] [get_pins clk_div_0/clk_div_reg/Q]
-
+#create_generated_clock -name clk_div -divide_by 125000000 -source [get_ports clk] [get_pins clk_div_0/clk_div_reg/Q];
 ##Switches
 
-set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS33 } [get_ports { sw }]; #IO_L7N_T1_AD2N_35 Sch=sw[0]
+#set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS33 } [get_ports { sw }]; #IO_L7N_T1_AD2N_35 Sch=sw[0]
 #set_property -dict { PACKAGE_PIN M19   IOSTANDARD LVCMOS33 } [get_ports { sw[1] }]; #IO_L7P_T1_AD2P_35 Sch=sw[1]
 
 ##RGB LEDs

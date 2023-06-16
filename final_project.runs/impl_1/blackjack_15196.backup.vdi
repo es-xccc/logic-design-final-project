@@ -1,14 +1,15 @@
-
-*** Running vivado
-    with args -log blackjack.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source blackjack.tcl -notrace
-
-
-
-****** Vivado v2022.2.2 (64-bit)
-  **** SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
-  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2022.2.2 (64-bit)
+# SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
+# IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
+# Start of session at: Fri Jun 16 13:15:10 2023
+# Process ID: 15196
+# Current directory: C:/Github_Repo/Logic_Design_final_project/final_project.runs/impl_1
+# Command line: vivado.exe -log blackjack.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source blackjack.tcl -notrace
+# Log file: C:/Github_Repo/Logic_Design_final_project/final_project.runs/impl_1/blackjack.vdi
+# Journal file: C:/Github_Repo/Logic_Design_final_project/final_project.runs/impl_1\vivado.jou
+# Running On: DESKTOP-LCJND1O, OS: Windows, CPU Frequency: 3394 MHz, CPU Physical cores: 12, Host memory: 17101 MB
+#-----------------------------------------------------------
 source blackjack.tcl -notrace
 create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 398.586 ; gain = 64.766
 Command: link_design -top blackjack -part xc7z020clg400-1
@@ -541,66 +542,3 @@ INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file blackjack_
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
 INFO: [Common 17-206] Exiting Vivado at Fri Jun 16 13:16:26 2023...
-
-*** Running vivado
-    with args -log blackjack.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source blackjack.tcl -notrace
-
-
-
-****** Vivado v2022.2.2 (64-bit)
-  **** SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
-  **** IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-    ** Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
-
-source blackjack.tcl -notrace
-Command: open_checkpoint blackjack_routed.dcp
-INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 829.848 ; gain = 0.000
-INFO: [Project 1-479] Netlist was created with Vivado 2022.2.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.122 . Memory (MB): peak = 1534.949 ; gain = 7.953
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.123 . Memory (MB): peak = 1534.949 ; gain = 7.953
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1534.949 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-INFO: [Project 1-604] Checkpoint was created with Vivado v2022.2.2 (64-bit) build 3788238
-OpenCheckpoint Checksum | Checksum: f35e0163
------ Checksum: PlaceDB: 91841599 ShapeSum: 19e3ff62 RouteDB: 47f5ec68 
-open_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1534.949 ; gain = 1201.320
-Command: write_bitstream -force blackjack.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC PDRC-153] Gated clock check: Net num2__0 is a gated clock net sourced by a combinational pin num3_reg[4]_i_2/O, cell num3_reg[4]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC PDRC-153] Gated clock check: Net state_reg_i_2_n_0 is a gated clock net sourced by a combinational pin state_reg_i_2/O, cell state_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 3 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Writing bitstream ./blackjack.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-83] Releasing license: Implementation
-20 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 2029.133 ; gain = 494.184
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 16 13:17:55 2023...
