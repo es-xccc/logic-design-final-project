@@ -1,3 +1,4 @@
+`timescale 1ns/1ns
 module blackjack(input [6:0]num3,num2,num1,num0, input clk, input [3:0] btn, output reg [3:0] led, output reg [11:0] ar);
     
     reg [4:0]rand;
@@ -191,9 +192,5 @@ module blackjack(input [6:0]num3,num2,num1,num0, input clk, input [3:0] btn, out
                 end
             endcase
         end
-        clk_div clk_div_0(
-    .clk    (clk),
-    .rst    (rst),
-    .clk_div    (clk_div)
-    );
+
  endmodule
