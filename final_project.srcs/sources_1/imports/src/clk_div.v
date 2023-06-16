@@ -12,7 +12,7 @@ always@(posedge clk or posedge rst)
 begin
 	if (rst) 
 		cnt<=26'd0;
-	else if(cnt==62500000-1)
+	else if(cnt==62500-1)
 		cnt<=26'd0;
 	else	
 		cnt<=cnt+1;
@@ -22,7 +22,7 @@ always@(posedge clk or posedge rst)
 begin
 	if(rst)
 		clk_div<=1'b0;
-	else if(cnt==31250000-1)
+	else if(cnt==31250-1)
 		clk_div<=~clk_div;
 end
 

@@ -4,12 +4,15 @@
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 
 ## Clock signal 125 MHz
-
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets btn_IBUF[3]];
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets btn_IBUF[2]];
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets btn_IBUF[1]];
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets btn_IBUF[0]];
 set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L13P_T2_MRCC_35 Sch=sysclk
 create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports { clk }];
 
 #for clk_div
-create_generated_clock -name clk_div -divide_by 1250000 -source [get_ports clk] [get_pins clk_div_0/clk_div_reg/Q];
+create_generated_clock -name clk_div -divide_by 125000000000 -source [get_ports clk] [get_pins clk_div_0/clk_div_reg/Q];
 ##Switches
 
 #set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS33 } [get_ports { sw }]; #IO_L7N_T1_AD2N_35 Sch=sw[0]
