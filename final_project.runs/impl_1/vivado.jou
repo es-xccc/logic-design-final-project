@@ -2,12 +2,12 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 20:00:34 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Thu Jun 15 16:25:30 2023
-# Process ID: 10148
+# Start of session at: Fri Jun 16 11:30:52 2023
+# Process ID: 10596
 # Current directory: C:/Github_Repo/Logic_Design_final_project/final_project.runs/impl_1
-# Command line: vivado.exe -log led_shift.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source led_shift.tcl -notrace
-# Log file: C:/Github_Repo/Logic_Design_final_project/final_project.runs/impl_1/led_shift.vdi
+# Command line: vivado.exe -log blackjack.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source blackjack.tcl -notrace
+# Log file: C:/Github_Repo/Logic_Design_final_project/final_project.runs/impl_1/blackjack.vdi
 # Journal file: C:/Github_Repo/Logic_Design_final_project/final_project.runs/impl_1\vivado.jou
-# Running On: LAPTOP-TLK1S9GH, OS: Windows, CPU Frequency: 1190 MHz, CPU Physical cores: 4, Host memory: 8321 MB
+# Running On: DESKTOP-LCJND1O, OS: Windows, CPU Frequency: 3394 MHz, CPU Physical cores: 12, Host memory: 17101 MB
 #-----------------------------------------------------------
-source led_shift.tcl -notrace
+source blackjack.tcl -notrace

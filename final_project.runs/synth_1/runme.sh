@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log led_shift.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_shift.tcl
+EAStep vivado -log blackjack.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source blackjack.tcl
