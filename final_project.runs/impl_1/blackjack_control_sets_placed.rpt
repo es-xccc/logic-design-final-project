@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-| Date         : Fri Jun 16 19:28:40 2023
+| Date         : Fri Jun 16 20:24:02 2023
 | Host         : DESKTOP-LCJND1O running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file blackjack_control_sets_placed.rpt
 | Design       : blackjack
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              11 |            7 |
+| No           | No                    | No                     |              11 |            8 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              25 |            7 |
-| Yes          | No                    | No                     |              71 |           29 |
+| Yes          | No                    | No                     |              15 |            7 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               1 |            1 |
+| Yes          | Yes                   | No                     |              57 |           23 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,17 +74,17 @@ Table of Contents
 |    Clock Signal   |    Enable Signal   |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
 +-------------------+--------------------+---------------------------+------------------+----------------+--------------+
 |  btn_IBUF_BUFG[3] |                    |                           |                1 |              1 |         1.00 |
-|  btn_IBUF_BUFG[1] |                    |                           |                1 |              1 |         1.00 |
 |  clk_div_0/CLK    | ar_reg[11]_i_1_n_0 | ar[2]_i_1_n_0             |                1 |              1 |         1.00 |
+|  btn_IBUF_BUFG[1] |                    |                           |                1 |              1 |         1.00 |
 |  clk_IBUF_BUFG    |                    |                           |                2 |              2 |         1.00 |
-|  clk_div_0/CLK    | led[1]_i_1_n_0     |                           |                1 |              2 |         2.00 |
 |  clk_div_0/CLK    | led[3]_i_1_n_0     |                           |                1 |              2 |         2.00 |
-|  btn_IBUF_BUFG[0] | turn               |                           |                2 |              7 |         3.50 |
-|  btn_IBUF_BUFG[2] | point_1            |                           |                2 |              7 |         3.50 |
-|  clk_div_0/CLK    |                    |                           |                3 |              7 |         2.33 |
-|  clk_div_0/CLK    | ar_reg[11]_i_1_n_0 |                           |                8 |             11 |         1.38 |
-|  btn_IBUF_BUFG[3] | point_1            |                           |                7 |             21 |         3.00 |
-|  btn_IBUF_BUFG[1] | turn               |                           |                8 |             21 |         2.62 |
+|  clk_div_0/CLK    | led[1]_i_1_n_0     |                           |                1 |              2 |         2.00 |
+|  clk_div_0/CLK    |                    |                           |                4 |              7 |         1.75 |
+|  btn_IBUF_BUFG[2] | point_1            | sw_IBUF                   |                3 |              7 |         2.33 |
+|  btn_IBUF_BUFG[0] | turn               | sw_IBUF                   |                2 |              7 |         3.50 |
+|  clk_div_0/CLK    | ar_reg[11]_i_1_n_0 |                           |                5 |             11 |         2.20 |
+|  btn_IBUF_BUFG[3] | point_1            | sw_IBUF                   |                9 |             21 |         2.33 |
+|  btn_IBUF_BUFG[1] | turn               | sw_IBUF                   |                8 |             21 |         2.62 |
 |  clk_IBUF_BUFG    |                    | clk_div_0/cnt[25]_i_1_n_0 |                7 |             25 |         3.57 |
 +-------------------+--------------------+---------------------------+------------------+----------------+--------------+
 

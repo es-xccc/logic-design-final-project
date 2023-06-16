@@ -17,44 +17,57 @@ module blackjack(input clk, input sw, input [3:0] btn, output reg [3:0] led=4'b0
     reg [6:0] t10=7'd0, t11=7'd0, t20=7'd0, t21=7'd0, turn=7'd0;
 
     always @(posedge clk_div)begin
+                    if(sw)begin
+                        led[3]<=0;
+                        led[2]<=0;
+                        led[1]<=0;
+                        led[0]<=0;
+                    end
                     turn <= t10 + t11 + t20 + t21;
                     rand <= rand % 7'd10 + 7'd1;
                     if(point_1 == 7'd21)begin
-                            led[3]=1;
-                            led[2]=1;
+                            led[3]<=1;
+                            led[2]<=1;
                     end
                     if(point_2 == 7'd21)begin
-                            led[1]=1;
-                            led[0]=1;
+                            led[1]<=1;
+                            led[0]<=1;
                     end
                     if(point_1 > boom)begin
-                            led[1]=1;
-                            led[0]=1;
+                            led[1]<=1;
+                            led[0]<=1;
                     end
                     if(point_2 > boom)begin
-                            led[3]=1;
-                            led[2]=1;
+                            led[3]<=1;
+                            led[2]<=1;
                     end
                     if((p11-p10 > 0) && (p21-p20 > 0))begin
                             if(point_1 > point_2)begin
-                                    led[3]=1;
-                                    led[2]=1;
+                                    led[3]<=1;
+                                    led[2]<=1;
                             end
                             else if(point_1 < point_2)begin
-                                    led[1]=1;
-                                    led[0]=1;
+                                    led[1]<=1;
+                                    led[0]<=1;
                             end
                             else begin
-                                    led[3]=1;
-                                    led[2]=1;
-                                    led[1]=1;
-                                    led[0]=1;
+                                    led[3]<=1;
+                                    led[2]<=1;
+                                    led[1]<=1;
+                                    led[0]<=1;
                             end
                     end
     end
 
     always @(posedge btn[3]) begin
-                if(turn % 7'd2 == 0)begin
+                if(sw)begin
+                    point_1 = 0;
+                    num3 = 0;
+                    num2 = 0;
+                    p10 = 0;
+                    t10 = 0;
+                end
+                else if(turn % 7'd2 == 0)begin
                     point_1 = point_1 + rand;
                     num3 = (point_1 - point_1 % 7'd10) / 7'd10;
                     num2 = point_1 % 7'd10;
@@ -63,13 +76,24 @@ module blackjack(input clk, input sw, input [3:0] btn, output reg [3:0] led=4'b0
                 end
     end
     always @(posedge btn[2]) begin
-                if(turn % 7'd2 == 0)begin
+                if(sw)begin
+                    p11 = 0;
+                    t11 = 0;
+                end
+                else if(turn % 7'd2 == 0)begin
                     p11 = p11 + 7'd1;
                     t11 = t11 + 7'd1;
                 end
     end
     always @(posedge btn[1]) begin
-                if(turn % 7'd2 == 1)begin
+                if(sw)begin
+                    point_2 = 0;
+                    num1 = 0;
+                    num0 = 0;
+                    p20 = 0;
+                    t20 = 0;
+                end
+                else if(turn % 7'd2 == 1)begin
                     point_2 = point_2 + rand;
                     num1 = (point_2 - point_2 % 7'd10) / 7'd10;
                     num0 = point_2 % 7'd10;
@@ -78,7 +102,11 @@ module blackjack(input clk, input sw, input [3:0] btn, output reg [3:0] led=4'b0
                 end
     end
     always @(posedge btn[0]) begin
-                if(turn % 7'd2 == 1)begin
+                if(sw)begin
+                    p21 = 0;
+                    t21 = 0;
+                end
+                else if(turn % 7'd2 == 1)begin
                     p21 = p21 + 7'd1;
                     t21 = t21 + 7'd1;
                 end

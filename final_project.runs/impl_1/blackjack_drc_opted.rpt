@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-| Date         : Fri Jun 16 19:28:34 2023
+| Date         : Fri Jun 16 20:23:55 2023
 | Host         : DESKTOP-LCJND1O running 64-bit major release  (build 9200)
 | Command      : report_drc -file blackjack_drc_opted.rpt -pb blackjack_drc_opted.pb -rpx blackjack_drc_opted.rpx
 | Design       : blackjack
