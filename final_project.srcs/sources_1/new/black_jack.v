@@ -25,7 +25,7 @@ module blackjack( input clk,  input [3:0] btn, output reg [3:0] led=4'b0000, out
                             led[3]=1;
                             led[2]=1;
                     end
-                    if(??)begin
+                    if(p10 && p20)begin
                             if(point_1 > point_2)begin
                                     led[3]=1;
                                     led[2]=1;
@@ -43,7 +43,27 @@ module blackjack( input clk,  input [3:0] btn, output reg [3:0] led=4'b0000, out
                     end
                             
     end
-    always @(posedge btn[3]) begin
+    always @(posedge btn[3],posedge btn[2],posedge btn[1],posedge btn[0]) begin
+            if(btn[3])begin
+                    point_1 = point_1 + rand;
+                    num3 = (point_1 - point_1 % 7'd10) / 7'd10;
+                    num2 = point_1 % 7'd10;
+                    p10 = 0;
+            end
+            else if(btn[2])begin
+                    p10 = 1;
+                    end
+             else if(btn[1])begin
+             point_2 = point_2 + rand;
+                    num1 = (point_2 - point_2 % 7'd10) / 7'd10;
+                    num0 = point_2 % 7'd10;
+                    p20 = 1;
+                    end
+            else if(btn[0])begin
+            p20 = 1;
+            end
+            end
+    /*always @(posedge btn[3]) begin
                     point_1 = point_1 + rand;
                     num3 = (point_1 - point_1 % 7'd10) / 7'd10;
                     num2 = point_1 % 7'd10;
@@ -61,7 +81,7 @@ module blackjack( input clk,  input [3:0] btn, output reg [3:0] led=4'b0000, out
     always @(posedge btn[0]) begin
                     p21 = p21 + 7'd1;
     end
-
+*/
         reg [3:0] cou=4'd0;
         always @(posedge clk_div) begin
             case(cou)

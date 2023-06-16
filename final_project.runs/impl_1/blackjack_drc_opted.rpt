@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-| Date         : Fri Jun 16 16:38:04 2023
+| Date         : Fri Jun 16 17:01:27 2023
 | Host         : LAPTOP-TLK1S9GH running 64-bit major release  (build 9200)
 | Command      : report_drc -file blackjack_drc_opted.rpt -pb blackjack_drc_opted.pb -rpx blackjack_drc_opted.rpx
 | Design       : blackjack
@@ -24,11 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 3
+             Violations found: 2
 +---------+----------+---------------------+------------+
 | Rule    | Severity | Description         | Violations |
 +---------+----------+---------------------+------------+
-| PLCK-12 | Warning  | Clock Placer Checks | 2          |
+| PLCK-12 | Warning  | Clock Placer Checks | 1          |
 | ZPS7-1  | Warning  | PS7 block required  | 1          |
 +---------+----------+---------------------+------------+
 
@@ -40,19 +40,8 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	btn_IBUF[1]_inst (IBUF.O) is locked to D20
-	btn_IBUF_BUFG[1]_inst (BUFG.I) cannot be placed
-
-Related violations: <none>
-
-PLCK-12#2 Warning
-Clock Placer Checks  
-Poor placement for routing between an IO pin and BUFG. 
-Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
- This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
-
-	btn_IBUF[3]_inst (IBUF.O) is locked to L19
-	btn_IBUF_BUFG[3]_inst (BUFG.I) cannot be placed
+	btn_IBUF[0]_inst (IBUF.O) is locked to D19
+	btn_IBUF_BUFG[0]_inst (BUFG.I) cannot be placed
 
 Related violations: <none>
 
