@@ -1,8 +1,8 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-| Date             : Fri Jun 16 17:02:10 2023
-| Host             : LAPTOP-TLK1S9GH running 64-bit major release  (build 9200)
+| Date             : Fri Jun 16 19:29:15 2023
+| Host             : DESKTOP-LCJND1O running 64-bit major release  (build 9200)
 | Command          : report_power -file blackjack_power_routed.rpt -pb blackjack_power_summary_routed.pb -rpx blackjack_power_routed.rpx
 | Design           : blackjack
 | Device           : xc7z020clg400-1
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.107        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.005        |
+| Dynamic (W)              | 0.004        |
 | Device Static (W)        | 0.103        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.8         |
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |      396 |       --- |             --- |
-|   LUT as Logic |     0.002 |      173 |     53200 |            0.33 |
-|   CARRY4       |    <0.001 |       13 |     13300 |            0.10 |
-|   Register     |    <0.001 |      143 |    106400 |            0.13 |
-|   F7/F8 Muxes  |    <0.001 |       20 |     53200 |            0.04 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |     0.002 |      323 |       --- |             --- |
+| Slice Logic    |     0.002 |      309 |       --- |             --- |
+|   LUT as Logic |     0.001 |      129 |     53200 |            0.24 |
+|   CARRY4       |    <0.001 |       17 |     13300 |            0.13 |
+|   Register     |    <0.001 |      108 |    106400 |            0.10 |
+|   BUFG         |    <0.001 |        4 |        32 |           12.50 |
+|   F7/F8 Muxes  |    <0.001 |        8 |     53200 |            0.02 |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |     0.001 |      220 |       --- |             --- |
 | I/O            |    <0.001 |       21 |       125 |           16.80 |
 | Static Power   |     0.103 |          |           |                 |
 | Total          |     0.107 |          |           |                 |
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.012 |       0.005 |      0.007 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.011 |       0.004 |      0.007 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -149,7 +149,7 @@ Table of Contents
 +-----------+-----------+
 | Name      | Power (W) |
 +-----------+-----------+
-| blackjack |     0.005 |
+| blackjack |     0.004 |
 +-----------+-----------+
 
 

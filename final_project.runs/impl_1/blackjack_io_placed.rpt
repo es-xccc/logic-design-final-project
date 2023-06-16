@@ -1,8 +1,8 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2022.2.2 (win64) Build 3788238 Tue Feb 21 20:00:34 MST 2023
-| Date                      : Fri Jun 16 17:01:32 2023
-| Host                      : LAPTOP-TLK1S9GH running 64-bit major release  (build 9200)
+| Date                      : Fri Jun 16 19:28:40 2023
+| Host                      : DESKTOP-LCJND1O running 64-bit major release  (build 9200)
 | Command                   : report_io -file blackjack_io_placed.rpt
 | Design                    : blackjack
 | Device                    : xc7z020
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            21 |
+|            22 |
 +---------------+
 
 
@@ -273,7 +273,7 @@ Table of Contents
 | M16        |             | High Range | VCCO_35                 | VCCO        |             |      35 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | M17        |             | High Range | IO_L8P_T1_AD10P_35      | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | M18        |             | High Range | IO_L8N_T1_AD10N_35      | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| M19        |             | High Range | IO_L7P_T1_AD2P_35       | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| M19        | sw          | High Range | IO_L7P_T1_AD2P_35       | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | M20        |             | High Range | IO_L7N_T1_AD2N_35       | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | N1         |             |            | PS_DDR_CS_B_502         | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | N2         |             |            | PS_DDR_A0_502           | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

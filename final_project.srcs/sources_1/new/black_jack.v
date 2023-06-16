@@ -1,5 +1,5 @@
 `timescale 1ns/1ns
-module blackjack( input clk,  input [3:0] btn, output reg [3:0] led=4'b0000, output reg [11:0] ar);
+module blackjack(input clk, input sw, input [3:0] btn, output reg [3:0] led=4'b0000, output reg [11:0] ar);
     reg rst=0;
     wire clk_div;
     clk_div clk_div_0(
@@ -13,10 +13,20 @@ module blackjack( input clk,  input [3:0] btn, output reg [3:0] led=4'b0000, out
 
     reg [6:0] point_1=7'b0000000;
     reg [6:0] point_2=7'b0000000;
-    reg state=3'b00; //000:P1,P2(o);  001:P1,P2(x),  010:P2,P1(o);  011:P2,P1(x);  100:finish
-    reg [6:0] p10=0, p11=0, p20=0, p21=0;
+    reg [6:0] p10=7'd0, p11=7'd0, p20=7'd0, p21=7'd0;
+    reg [6:0] t10=7'd0, t11=7'd0, t20=7'd0, t21=7'd0, turn=7'd0;
+
     always @(posedge clk_div)begin
+                    turn <= t10 + t11 + t20 + t21;
                     rand <= rand % 7'd10 + 7'd1;
+                    if(point_1 == 7'd21)begin
+                            led[3]=1;
+                            led[2]=1;
+                    end
+                    if(point_2 == 7'd21)begin
+                            led[1]=1;
+                            led[0]=1;
+                    end
                     if(point_1 > boom)begin
                             led[1]=1;
                             led[0]=1;
@@ -25,7 +35,7 @@ module blackjack( input clk,  input [3:0] btn, output reg [3:0] led=4'b0000, out
                             led[3]=1;
                             led[2]=1;
                     end
-                    if(p10 && p20)begin
+                    if((p11-p10 > 0) && (p21-p20 > 0))begin
                             if(point_1 > point_2)begin
                                     led[3]=1;
                                     led[2]=1;
@@ -41,47 +51,39 @@ module blackjack( input clk,  input [3:0] btn, output reg [3:0] led=4'b0000, out
                                     led[0]=1;
                             end
                     end
-                            
     end
-    always @(posedge btn[3],posedge btn[2],posedge btn[1],posedge btn[0]) begin
-            if(btn[3])begin
+
+    always @(posedge btn[3]) begin
+                if(turn % 7'd2 == 0)begin
                     point_1 = point_1 + rand;
                     num3 = (point_1 - point_1 % 7'd10) / 7'd10;
                     num2 = point_1 % 7'd10;
-                    p10 = 0;
-            end
-            else if(btn[2])begin
-                    p10 = 1;
-                    end
-             else if(btn[1])begin
-             point_2 = point_2 + rand;
-                    num1 = (point_2 - point_2 % 7'd10) / 7'd10;
-                    num0 = point_2 % 7'd10;
-                    p20 = 1;
-                    end
-            else if(btn[0])begin
-            p20 = 1;
-            end
-            end
-    /*always @(posedge btn[3]) begin
-                    point_1 = point_1 + rand;
-                    num3 = (point_1 - point_1 % 7'd10) / 7'd10;
-                    num2 = point_1 % 7'd10;
-                    p10 = p10 + 7'd1;
+                    p10 = p11;
+                    t10 = t10 + 7'd1;
+                end
     end
     always @(posedge btn[2]) begin
+                if(turn % 7'd2 == 0)begin
                     p11 = p11 + 7'd1;
+                    t11 = t11 + 7'd1;
+                end
     end
     always @(posedge btn[1]) begin
+                if(turn % 7'd2 == 1)begin
                     point_2 = point_2 + rand;
                     num1 = (point_2 - point_2 % 7'd10) / 7'd10;
                     num0 = point_2 % 7'd10;
-                    p20 = p20 + 7'd1;
+                    p20 = p21;
+                    t20 = t20 + 7'd1;
+                end
     end
     always @(posedge btn[0]) begin
+                if(turn % 7'd2 == 1)begin
                     p21 = p21 + 7'd1;
+                    t21 = t21 + 7'd1;
+                end
     end
-*/
+
         reg [3:0] cou=4'd0;
         always @(posedge clk_div) begin
             case(cou)
